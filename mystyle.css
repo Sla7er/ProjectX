@@ -1,0 +1,36 @@
+h1 {
+    font-size: 2.5rem;
+    color: red; /* Cool dark blue */
+    margin-bottom: 1rem;
+    letter-spacing: 1px;
+    background-color: black;
+    text-align: center;
+}
+body{
+    background-color:rgb(48, 45, 45);
+}
+img{
+    width:200px;
+    height:100px;
+}
+button{
+    background-color: pink;
+    width: 150px;
+    height: 50px;
+}
+h2{
+    color:blue;
+}
+p{
+    color:aqua;
+}
+ul{
+    color:rgb(67, 43, 226);
+}
+ol{
+    color:blue
+}
+h3{
+    color:antiquewhite;
+    background-image: -moz-linear-gradient();
+}
