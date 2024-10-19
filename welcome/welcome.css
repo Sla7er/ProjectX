@@ -1,0 +1,140 @@
+/* General Header and Navigation Styles */
+header {
+    background-color: #333; /* Dark background for the header */
+    padding: 10px 0;
+    color: white;
+  }
+  
+  .navigation ul {
+    list-style-type: none; /* Remove default bullet points */
+    margin: 0;
+    padding: 0;
+    display: flex; /* Display items in a horizontal row */
+    justify-content: center; /* Center the navigation links */
+  }
+  
+  .navigation ul li {
+    position: relative; /* For positioning dropdown */
+  }
+  
+  .navigation ul li a {
+    color: white;
+    padding: 14px 20px;
+    text-decoration: none;
+    display: block;
+    text-align: center;
+  }
+  
+  .navigation ul li a:hover {
+    background-color: #575757; /* Change color when hovering over the links */
+  }
+  
+  /* Dropdown Styles */
+  .dropdown-content {
+    display: none; /* Hide dropdown by default */
+    position: absolute;
+    background-color: #f9f9f9; /* Light background for dropdown */
+    min-width: 160px; /* Minimum width of the dropdown */
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2); /* Add a shadow */
+    z-index: 1; /* Bring dropdown above other elements */
+    background-color: black;
+  }
+  
+  .dropdown-content a {
+    color: black; /* Link color in the dropdown */
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left; /* Align text to the left */
+  }
+  
+  .dropdown-content a:hover {
+    background-color: #ddd; /* Light gray background on hover */
+  }
+  
+  /* Show the dropdown when hovering */
+  .dropdown:hover .dropdown-content {
+    display: block; /* Show dropdown when hovered */
+  }
+  
+  /* Optional: Styling for active state */
+  .navigation ul li a.active {
+    background-color: #4CAF50; /* Green background for active page */
+  }
+  body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(to bottom right, #74ebd5, #acb6e5); /* Soft teal to light lavender */
+    color: #333; /* Darker text color for better readability */
+}
+
+header {
+    background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent dark header */
+    padding: 20px 0; /* Increased padding */
+    text-align: center; /* Center text */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5); /* Shadow effect */
+}
+
+h1 {
+    margin: 0; /* Remove margin */
+    font-size: 3rem; /* Increased header size */
+    color: #fff; /* White text */
+}
+
+nav {
+    margin: 15px 0; /* Margin */
+}
+
+nav a {
+    color: white; /* Link color */
+    padding: 10px 20px; /* Padding */
+    text-decoration: none; /* Remove underline */
+    background-color: #575757; /* Background for links */
+    border-radius: 5px; /* Rounded corners */
+    margin: 0 5px; /* Space between links */
+    transition: background-color 0.3s; /* Smooth transition */
+}
+
+nav a:hover {
+    background-color: #444; /* Darker background on hover */
+}
+
+main {
+    padding: 20px; /* Padding for main content */
+    max-width: 800px; /* Max width */
+    margin: 30px auto; /* Center with margin */
+    background: rgba(255, 255, 255, 0.9); /* Slightly transparent white */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3); /* Shadow effect */
+}
+
+h2 {
+    text-align: center; /* Center heading */
+    color: #4CAF50; /* Green */
+    font-size: 2rem; /* Increased font size */
+}
+
+.project {
+    margin: 20px 0; /* Margin */
+    padding: 10px; /* Padding */
+    background: rgba(255, 255, 255, 0.8); /* Transparent white */
+    border-radius: 5px; /* Rounded corners */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2); /* Shadow effect */
+}
+
+.project h3 {
+    margin-top: 0; /* Remove top margin */
+    color: #333; /* Dark text */
+}
+
+footer {
+    text-align: center; /* Center footer */
+    padding: 10px; /* Padding */
+    background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent dark footer */
+    color: white; /* Footer text color */
+    position: relative; /* Position */
+    bottom: 0; /* Bottom */
+    width: 100%; /* Full width */
+    margin-top: 20px; /* Space above footer */
+}

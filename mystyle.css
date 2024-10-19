@@ -1,13 +1,17 @@
 h1 {
     font-size: 2.5rem;
-    color: red; /* Cool dark blue */
+    color: white; /* Cool dark blue */
     margin-bottom: 1rem;
     letter-spacing: 1px;
-    background-color: black;
+    background-color: rgba(57, 51, 51, 0.488);
     text-align: center;
 }
 body{
-    background-color:rgb(48, 45, 45);
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background: linear-gradient(to bottom, #00008B, #87CEEB); /* Dark blue to light blue */
+    color: #333; /* Text color */
 }
 img{
     width:200px;
@@ -19,18 +23,85 @@ button{
     height: 50px;
 }
 h2{
-    color:blue;
+    color:black;
 }
 p{
-    color:aqua;
+    color:white;
 }
 ul{
-    color:rgb(67, 43, 226);
+    color:white;
 }
 ol{
-    color:blue
+    color:white;
 }
 h3{
     color:antiquewhite;
     background-image: -moz-linear-gradient();
 }
+header {
+    background-color: #333; /* Dark background for the header */
+    padding: 10px 0; /* Vertical padding */
+    color: white; /* Text color */
+}
+.navigation ul {
+    list-style-type: none; /* Remove default bullet points */
+    margin: 0; /* Remove default margin */
+    padding: 0; /* Remove default padding */
+    display: flex; /* Display items in a horizontal row */
+    justify-content: center; /* Center the navigation links */
+}
+
+.navigation ul li {
+    position: relative; /* For positioning dropdown */
+}
+
+.navigation ul li a {
+    color: white; /* Link color */
+    padding: 14px 20px; /* Padding around the links */
+    text-decoration: none; /* Remove underline from links */
+    display: block; /* Make the link fill the list item */
+    text-align: center; /* Center the text */
+}
+
+.navigation ul li a:hover {
+    background-color: #575757; /* Change color when hovering over the links */
+}
+
+/* Dropdown Styles */
+.dropdown-content {
+    display: none; /* Hide dropdown by default */
+    position: absolute; /* Position it below the dropdown button */
+    background-color: #f9f9f9; /* Light background for dropdown */
+    min-width: 160px; /* Minimum width of the dropdown */
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2); /* Add a shadow */
+    z-index: 1; /* Bring dropdown above other elements */
+}
+
+.dropdown-content a {
+    color: black; /* Link color in the dropdown */
+    padding: 12px 16px; /* Padding for dropdown links */
+    text-decoration: none; /* Remove underline */
+    display: block; /* Make links fill the dropdown */
+    text-align: left; /* Align text to the left */
+    background-color:black;
+}
+
+.dropdown-content a:hover {
+    background-color: #ddd; /* Light gray background on hover */
+}
+
+/* Show the dropdown when hovering */
+.dropdown:hover .dropdown-content {
+    display: block; /* Show dropdown when hovered */
+}
+
+/* Optional: Styling for active state */
+.navigation ul li a.active {
+    background-color: #4CAF50; /* Green background for active page */
+}
+footer {
+    background-color: #333 !important; /* Dark background */
+    color: white !important; /* Text color */
+    padding: 20px 0 !important; /* Vertical padding */
+    font-family: 'Arial', sans-serif !important;
+  }
