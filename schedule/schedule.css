@@ -40,8 +40,6 @@ caption {
     color: #333;
 }
 .Network{
-    
-
     position: absolute; 
     top:0;
     bottom:0;
@@ -56,7 +54,6 @@ caption {
     z-index: 1500; 
     border-radius: 5px; /* Rounded corners */
     box-shadow: 0 4px 10px rgb(213, 41, 139); /* Adds a subtle shadow for depth */
-
 }
 .Electronics{
     position: absolute; 

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enter CV Details</title>
+    <link rel="stylesheet" href="inputcv.css">
+</head>
+<body>
+    <div class="navigation">
+        <ul>
+            <li><a href="../welcome/welcome.html">Home</a></li>
+            <li class="dropdown">
+                <a href="#" class="dropbtn">Research</a>
+                <div class="dropdown-content">
+                    <a href="../page1.html">Internet</a>
+                    <a href="../page2.html">CSS</a>
+                    <a href="../page3.html">Arabic</a>
+                </div>
+            </li>
+            <li><a href="../schedule/page4.html">Schedule</a></li>
+            <li><a href="../cv/cv.html">CV</a></li>
+            <li><a href="inputcv.html">Input CV</a></li>
+        </ul>
+    </div>
+    <h1>Enter Your CV Details</h1>
+    <form id="cvForm">
+        <label>Name: <input type="text" id="name" required></label><br><br>
+        <label>Profession: <input type="text" id="profession" required></label><br><br>
+        <label>Phone: <input type="text" id="phone" required></label><br><br>
+        <label>Location: <input type="text" id="location" required></label><br><br>
+        <label>Email: <input type="email" id="email" required></label><br><br>
+        <label>Instagram: <input type="url" id="instagram"></label><br><br>
+        <label>Facebook: <input type="url" id="facebook"></label><br><br>
+
+        <!-- Add sections for education, skills, etc., as needed -->
+        
+        <button type="submit">Submit</button>
+    </form>
+
+    <script>
+        document.getElementById('cvForm').addEventListener('submit', function(event) {
+            event.preventDefault();  // Prevent form submission
+
+            // Collect form data and save it to local storage
+            const cvData = {
+                name: document.getElementById('name').value,
+                profession: document.getElementById('profession').value,
+                phone: document.getElementById('phone').value,
+                location: document.getElementById('location').value,
+                email: document.getElementById('email').value,
+                instagram: document.getElementById('instagram').value,
+                facebook: document.getElementById('facebook').value
+            };
+
+            localStorage.setItem('cvData', JSON.stringify(cvData));
+
+            // Redirect to the display page
+            window.location.href = 'outputcv.html';
+        });
+    </script>
+</body>
+</html>
