@@ -1,13 +1,13 @@
-// HTML Elements
 const gameContainer = document.getElementById("game-container");
 const keyboardContainer = document.getElementById("keyboard");
 const resetButton = document.getElementById("reset-button");
 const messageElement = document.getElementById("message");
 
-// Constants
 const wordToGuess = "APPLE"; // The target word
 const maxAttempts = 6;
 let currentRow = 0;
+
+// Keyboard layout
 const keyboardLayout = "QWERTYUIOPASDFGHJKLZXCVBNM".split("");
 const keyStates = {}; // Tracks the state of each key (correct, present, absent)
 
@@ -29,6 +29,7 @@ function createGrid() {
     }
 }
 
+// Initialize keyboard
 function createKeyboard() {
     keyboardContainer.innerHTML = ""; // Clear existing keyboard
     keyboardLayout.forEach((key) => {
@@ -50,8 +51,6 @@ function updateKeyboardState(key, state) {
         keyElement.className = `key ${keyStates[key]}`;
     }
 }
-// Create a new Audio object for the confetti sound
-const confettiSound = new Audio('sounds/confetti-sound.mp3');
 
 // Check guess and update tiles
 function checkGuess(guess) {
@@ -82,24 +81,13 @@ function checkGuess(guess) {
         }
     }
 
-    // Check win condition
+    // Check win or lose condition
     if (guess === wordToGuess) {
         messageElement.textContent = "Congratulations! You guessed the word!";
         disableRow();
-
-        // Trigger confetti
-        confetti({
-            particleCount: 200,
-    startVelocity: 45,
-    spread: 360,
-    origin: { x: 0.5, y: 0.5 } // Center of the screen
-        });
-        confettiSound.play();
-
         return;
     }
 
-    // Check lose condition
     currentRow++;
     if (currentRow >= maxAttempts) {
         messageElement.textContent = `Game Over! The word was "${wordToGuess}".`;
@@ -109,13 +97,12 @@ function checkGuess(guess) {
     }
 }
 
-
 // Reset game
 resetButton.addEventListener("click", () => {
     // Clear the game state
     gameContainer.innerHTML = ""; // Clear the game grid
     keyboardContainer.innerHTML = ""; // Clear the keyboard
-    Object.keys(keyStates).forEach((key) => delete keyStates[key]); // Clear key states
+    Object.keys(keyStates).forEach(key => delete keyStates[key]); // Clear key states
     messageElement.textContent = ""; // Clear the message
     currentRow = 0; // Reset the current row
 
@@ -124,7 +111,6 @@ resetButton.addEventListener("click", () => {
     createKeyboard();
     focusFirstTile(0); // Focus on the first tile of the grid
 });
-
 
 function disableRow() {
     document.querySelectorAll(`.tile[data-row="${currentRow}"]`).forEach((tile) => {

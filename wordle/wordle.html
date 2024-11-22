@@ -3,105 +3,33 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Wordle Game</title>
+    <link rel="stylesheet" href="wordle.css">
 </head>
 <body>
-    <style>
-        body {
-    display: flex;      
-    flex-direction: column;        /* Enables Flexbox layout */
-    justify-content: center;     /* Horizontally centers the table */
-    align-items: center;         /* Vertically centers the table */
-    height: 100vh;               /* Makes the body height fill the full viewport */
-    margin: 0;                   /* Removes default margin from the body */
-}
-        .wordle-grid {
-            border-collapse: collapse;
-        }
-        .wordle-grid td {
-            width: 50px;
-            height: 50px;
-            border: 1px solid #000;
-            text-align: center;
-            font-size: 24px;
-            font-weight: bold;
-        }
-        .wordle-grid td.empty {
-            background-color: #ddd;
-        }
-        .keyboard {
-            display: flex;
-            flex-direction: column;
-            align-items: center;       /* Center keyboard buttons */
-            margin-top: 20px;         /* Space between grid and keyboard */
-        }
-
-        .keyboard-row {
-            display: flex;             /* Create rows for keyboard */
-            margin-bottom: 5px;       /* Space between rows */
-        }
-
-        .key {
-            width: 40px;              /* Width of each key */
-            height: 40px;             /* Height of each key */
-            margin: 2px;              /* Space around each key */
-            text-align: center;
-            line-height: 40px;        /* Center text vertically */
-            border: 1px solid #000;   /* Border for keys */
-            background-color: #f0f0f0;/* Background color for keys */
-            cursor: pointer;          /* Change cursor on hover */
-            font-weight: bold;
-        }
-
-        .key:hover {
-            background-color: #e0e0e0; /* Change color on hover */
-        }
-    </style>
-    <table class="wordle-grid">
-        <!-- Create 6 rows -->
-        <tr><td class="empty"></td><td class="empty"></td><td class="empty"></td><td class="empty"></td><td class="empty"></td></tr>
-        <tr><td class="empty"></td><td class="empty"></td><td class="empty"></td><td class="empty"></td><td class="empty"></td></tr>
-        <tr><td class="empty"></td><td class="empty"></td><td class="empty"></td><td class="empty"></td><td class="empty"></td></tr>
-        <tr><td class="empty"></td><td class="empty"></td><td class="empty"></td><td class="empty"></td><td class="empty"></td></tr>
-        <tr><td class="empty"></td><td class="empty"></td><td class="empty"></td><td class="empty"></td><td class="empty"></td></tr>
-        <tr><td class="empty"></td><td class="empty"></td><td class="empty"></td><td class="empty"></td><td class="empty"></td></tr>
-    </table>
-    <div class="keyboard">
-        <!-- Keyboard Rows -->
-        <div class="keyboard-row">
-            <div class="key">Q</div>
-            <div class="key">W</div>
-            <div class="key">E</div>
-            <div class="key">R</div>
-            <div class="key">T</div>
-            <div class="key">Y</div>
-            <div class="key">U</div>
-            <div class="key">I</div>
-            <div class="key">O</div>
-            <div class="key">P</div>
-        </div>
-        <div class="keyboard-row">
-            <div class="key">A</div>
-            <div class="key">S</div>
-            <div class="key">D</div>
-            <div class="key">F</div>
-            <div class="key">G</div>
-            <div class="key">H</div>
-            <div class="key">J</div>
-            <div class="key">K</div>
-            <div class="key">L</div>
-        </div>
-        <div class="keyboard-row">
-            <div class="key">Z</div>
-            <div class="key">X</div>
-            <div class="key">C</div>
-            <div class="key">V</div>
-            <div class="key">B</div>
-            <div class="key">N</div>
-            <div class="key">M</div>
-        </div>
+    <div class="navigation">
+        <ul>
+            <li><a href="welcome.html">Home</a></li>
+            <li class="dropdown">
+                <a href="#" class="dropbtn">Research</a>
+                <div class="dropdown-content">
+                    <a href="../page1.html">Internet</a>
+                    <a href="../page2.html">Css</a>
+                    <a href="../page3.html">Arabic</a>
+                </div>
+            </li>
+            <li><a href="../schedule/page4.html">Schedule</a></li>
+            <li><a href="../cv/cv.html">CV</a></li>
+            <li><a href="../inputcv/inputcv.html">Input CV</a></li>
+            <li><a href="wordle.html">wordle</a></li>
+        </ul>
     </div>
-
-    
+    <h1>Wordle Game</h1>
+    <div id="game-container"></div>
+    <div id="keyboard"></div>
+    <button id="reset-button">Reset Game</button>
+    <p id="message"></p>
+    <script src="wordle.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
 </body>
-</html>
+</html> 
