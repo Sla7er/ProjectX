@@ -51,7 +51,7 @@ caption {
     display: flex; /* must write to be able to align vertical and horizontal text in box*/
     justify-content: center; /*horizontally*/
     align-items: center; /* vertically*/
-    z-index: 1500; 
+    z-index: 100; 
     border-radius: 5px; /* Rounded corners */
     box-shadow: 0 4px 10px rgb(213, 41, 139); /* Adds a subtle shadow for depth */
 }
@@ -84,7 +84,7 @@ caption {
     display: flex; 
     justify-content: center; 
     align-items: center; 
-    z-index: 1500; 
+    z-index: 100; 
     border-radius: 5px; /* Rounded corners */
     box-shadow: 0 4px 10px rgb(213, 41, 139); /* Adds a subtle shadow for depth */
 
