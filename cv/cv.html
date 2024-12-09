@@ -4,26 +4,44 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="../main/maincss.css">
     <link rel="stylesheet" href="cv.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
-  <div class="navigation">
-    <ul>
-        <li><a href="../welcome/welcome.html">Home</a></li>
-        <li class="dropdown">
-            <a href="#" class="dropbtn">Research</a>
-            <div class="dropdown-content">
-                <a href="../page1.html">Internet</a>
-                <a href="../page2.html">Css</a>
-                <a href="../page3.html">Arabic</a>
-            </div>
-        </li>
-        <li><a href="../schedule/page4.html">Schedule</a></li>
-        <li><a href="cv.html">CV</a></li>
-        <li><a href="../inputcv/inputcv.html">Input CV</a></li>
-        <li><a href="../wordle/wordle.html">wordle</a></li>
-    </ul>
-</div>
+    <!-- Navbar (sit on top) -->
+<div class="navbar">
+    <div class="navbar-container">
+      <a href="#home" class="logo">Elie</a>
+      <!-- Right-sided navbar links -->
+      <div class="nav-links">
+        <a href="../welcome/welcome.html" class="nav-link">Home</a>
+        <a href="../wordle/wordle.html" class="nav-link"> Wordle </a>
+        <a href="../schedule/page4.html" class="nav-link"> Schedule</a>
+        
+        <!-- Research dropdown -->
+        <div class="dropdown">
+          <a href="#" class="nav-link"> Research</a>
+          <div class="dropdown-content">
+            <a href="../research/page1.html">Internet</a>
+            <a href="../research/page2.html">CSS</a>
+            <a href="../research/page3.html">Lebanese food</a>
+            <a href="../research/javascript.html">JavaScript</a>
+            <a href="../research/www.html">World Wide Web</a>
+          </div>
+        </div>
+  
+        <!-- CV dropdown -->
+        <div class="dropdown">
+          <a href="#" class="nav-link"> CV</a>
+          <div class="dropdown-content">
+            <a href="../cv/cv.html">myCV</a>
+            <a href="../inputcv/inputcv.html">Create</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
     <div class="wrapper">
         <div class="intro">
           <div class="profile">
@@ -37,7 +55,7 @@
           </div>
           <div class="intro-section about">
             <h1 class="title">about me</h1>
-            <p class="paragraph">
+            <p class="paragraph" style="margin-bottom: 20px;margin-top: 20px;">
                 I am a Computer Engineering student at the Holy Spirit University of Kaslik, Lebanon and my major is CCE. I am passionate
                 about Self-learning and further developing my programming skills. My goal is to become a cybersecurity specialist.
             </p>
@@ -54,35 +72,24 @@
             </div>
             <div class="info-section">
               <i class="fas fa-paper-plane"></i>
-              <span>elie.a.bouassi@net.usek.edu.lb</span>
-            </div>
-            <div class="info-section link">
-              <i class="fab fa-facebook"></i>
-              <a target="_blank" rel="author" href="#">
-                <span>  </span>
-              </a>
+              <span>elie898@icloud.com</span>
             </div>
           </div>
           <div class="intro-section follow">
             <h1 class="title">Follow</h1>
             <div class="info-section link">
-              <i class="fab fa-github"></i>
+              <i class="fab fa-instagram"></i>
               <a target="_blank" rel="author" href="https://www.instagram.com/eliebouassi_/">
                 <span>instagram</span>
               </a>
             </div>
             <div class="info-section link">
-              <i class="fab fa-codepen"></i>
+              <i class="fab fa-facebook"></i>
               <a target="_blank" rel="author" href="https://www.facebook.com/profile.php?id=100009630781087">
                 <span>facebook</span>
               </a>
             </div>
-            <div class="info-section link">
-              <i class="fab fa-medium"></i>
-              <a target="_blank" rel="author" href="#">
-                <span>   </span>
-              </a>
-            </div>
+            
           </div>
         </div>
         <div class="detail">
@@ -195,7 +202,7 @@
                     <span>Music</span>
                   </li>
                   <li>
-                    <i class="fas fa-book-spells"></i>
+                    <i class="fas fa-book"></i>
                     <span>Self-learning</span>
                   </li>
                   <li>

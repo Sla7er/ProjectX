@@ -4,27 +4,44 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Schedule</title>
+    <link rel="stylesheet" href="../main/maincss.css">
     <link rel="stylesheet" href="schedule.css">
 </head>
 <body>
-    <div class="navigation">
-        <ul>
-            <li><a href="../welcome/welcome.html">Home</a></li>
-            <li class="dropdown">
-                <a href="#" class="dropbtn">Research</a>
-                <div class="dropdown-content">
-                    <a href="../page1.html">Internet</a>
-                    <a href="../page2.html">Css</a>
-                    <a href="../page3.html">Arabic</a>
-                </div>
-            </li>
-            <li><a href="page4.html">Schedule</a></li>
-            <li><a href="../cv/cv.html">CV</a></li>
-            <li><a href="../inputcv/inputcv.html">Input CV</a></li>
-            <li><a href="../wordle/wordle.html">wordle</a></li>
-        </ul>
+    <!-- Navbar (sit on top) -->
+<div class="navbar">
+    <div class="navbar-container">
+      <a href="#home" class="logo">Elie</a>
+      <!-- Right-sided navbar links -->
+      <div class="nav-links">
+        <a href="../welcome/welcome.html" class="nav-link">Home</a>
+        <a href="../wordle/wordle.html" class="nav-link"> Wordle </a>
+        <a href="../schedule/page4.html" class="nav-link"> Schedule</a>
+        
+        <!-- Research dropdown -->
+        <div class="dropdown">
+          <a href="#" class="nav-link"> Research</a>
+          <div class="dropdown-content">
+            <a href="../research/page1.html">Internet</a>
+            <a href="../research/page2.html">CSS</a>
+            <a href="../research/page3.html">Lebanese food</a>
+            <a href="../research/javascript.html">JavaScript</a>
+            <a href="../research/www.html">World Wide Web</a>
+          </div>
+        </div>
+  
+        <!-- CV dropdown -->
+        <div class="dropdown">
+          <a href="#" class="nav-link"> CV</a>
+          <div class="dropdown-content">
+            <a href="../cv/cv.html">myCV</a>
+            <a href="../inputcv/inputcv.html">Create</a>
+          </div>
+        </div>
+      </div>
     </div>
-        <table>
+  </div>
+        <table style="margin-top: 60px;">
                 <tr>
                     <th>time</th>
                     <th>Monday</th>

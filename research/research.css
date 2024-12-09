@@ -1,0 +1,118 @@
+/* General Reset */
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #f9f9f9;
+    color: #333;
+    margin: 0;
+    padding: 20px;
+}
+
+
+/* Headings */
+h1, h2, h3 {
+    color: #222;
+    margin-bottom: 20px;
+}
+
+h1 {
+    font-size: 2.5rem;
+    text-align: center;
+    margin-top: 70px;
+}
+
+h2 {
+    font-size: 2rem;
+    border-bottom: 2px solid #ddd;
+    padding-bottom: 5px;
+    margin-top: 30px;
+}
+
+h3 {
+    font-size: 1.5rem;
+    margin-top: 20px;
+    color: #555;
+}
+
+/* Paragraphs */
+p {
+    margin-bottom: 15px;
+    line-height: 1.8;
+}
+
+/* Lists */
+ul, ol {
+    margin: 20px 0 20px 40px;
+}
+
+ul li, ol li {
+    margin-bottom: 10px;
+    font-size: 1rem;
+}
+
+/* Images */
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 20px auto;
+    border-radius: 5px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Links */
+a {
+    color: #0066cc;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+a:hover {
+    color: #003366;
+    text-decoration: underline;
+}
+
+/* References Section */
+ol {
+    padding-left: 20px;
+}
+
+ol li {
+    margin-bottom: 10px;
+}
+
+/* Section-specific styles */
+h2 + p {
+    margin-top: 10px;
+}
+
+p + ul, p + ol {
+    margin-top: 10px;
+}
+
+/* Code Block Styles */
+code {
+    background-color: #f4f4f4;
+    padding: 2px 4px;
+    border-radius: 4px;
+    font-family: "Courier New", Courier, monospace;
+}
+
+/* Header Alignment */
+h1 + p {
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+/* Image Alignment */
+img[src$="ARPANET_full_thumb.jpg"] {
+    max-width: 500px;
+    margin: 30px auto;
+}
+
+/* List Styles */
+ul li::marker, ol li::marker {
+    color: #555;
+}

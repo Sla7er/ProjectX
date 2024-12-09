@@ -1,60 +1,106 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Welcome to My Projects</title>
-    <link rel="stylesheet" href="welcome.css"> <!-- Link to your CSS file -->
-    <style>
-        
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Elie Bou Assi</title>
+  <link rel="stylesheet" href="../main/maincss.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> 
+
 </head>
 <body>
-    <div class="navigation">
-        <ul>
-            <li><a href="welcome.html">Home</a></li>
-            <li class="dropdown">
-                <a href="#" class="dropbtn">Research</a>
-                <div class="dropdown-content">
-                    <a href="../page1.html">Internet</a>
-                    <a href="../page2.html">Css</a>
-                    <a href="../page3.html">Arabic</a>
-                </div>
-            </li>
-            <li><a href="../schedule/page4.html">Schedule</a></li>
-            <li><a href="../cv/cv.html">CV</a></li>
-            <li><a href="../inputcv/inputcv.html">Input CV</a></li>
-            <li><a href="../wordle/wordle.html">wordle</a></li>
-        </ul>
-    </div>
-    <main>
-        <h2>About Me</h2>
-        <p>Hello! I'm Elie Bou Assi, a computer engineering student at the Holy Spirit University of Kaslik. Below are some of the projects I've worked on.</p>
 
-        <h2>My Projects</h2>
-        <div class="project">
-            <h3>Project 1</h3>
-            <p>Internet <a href="../page1.html">View Project</a></p>
+<!-- Navbar (sit on top) -->
+<div class="navbar">
+  <div class="navbar-container">
+    <a href="#home" class="logo">Elie</a>
+    <!-- Right-sided navbar links -->
+    <div class="nav-links">
+      <a href="../welcome/welcome.html" class="nav-link">Home</a>
+      <a href="../wordle/wordle.html" class="nav-link"> Wordle </a>
+      <a href="../schedule/page4.html" class="nav-link"> Schedule</a>
+      
+      <!-- Research dropdown -->
+      <div class="dropdown">
+        <a href="#" class="nav-link"> Research</a>
+        <div class="dropdown-content">
+          <a href="../research/page1.html">Internet</a>
+          <a href="../research/page2.html">CSS</a>
+          <a href="../research/page3.html">Lebanese food</a>
+          <a href="../research/javascript.html">JavaScript</a>
+          <a href="../research/www.html">World Wide Web</a>
         </div>
-        <div class="project">
-            <h3>Project 2</h3>
-            <p>CSS <a href="../page2.html">View Project</a></p>
+      </div>
+
+      <!-- CV dropdown -->
+      <div class="dropdown">
+        <a href="#" class="nav-link"> CV</a>
+        <div class="dropdown-content">
+          <a href="../cv/cv.html">myCV</a>
+          <a href="../inputcv/inputcv.html">Create</a>
         </div>
-        <div class="project">
-            <h3>Project 3</h3>
-            <p>Arabic <a href="../page3.html">View Project</a></p>
-        </div>
-        <div class="project">
-            <h3>Project 4</h3>
-            <p>Schedule <a href="../schedule/page4.html">View Project</a></p>
-        </div>
-        <div class="project">
-            <h3>Project 5</h3>
-            <p>CV <a href="../cv/cv.html">View Project</a></p>
-        </div>
-    </main>
-    <footer>
-        <p>This website is intended for educational purposes only and is not affiliated with any official university entity.</p>
-    </footer>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Header with full-height image -->
+<header class="header" id="home">
+  <div class="header-text">
+    <h1 class="header-title">Welcome to Elie Bou Assi's Website</h1>
+    <h2 class="header-subtitle">I'm a Computer Engineering student at USEK, this website is part of my web project.</h2>
+    <p><a href="#about" class="btn-learn-more">Check out my projects</a></p>
+  </div> 
+</header>
+
+<!-- About Section -->
+<div class="container" id="about">
+  <h3 class="section-title">My Projects</h3>
+  <p class="section-subtitle">Made with blood, sweat, and tears</p>
+  <div class="feature-cards">
+    <div class="feature-card">
+      <a href="../wordle/wordle.html" class="feature-icon">
+        <img src="../css/images/Wordle-logo-01.png" alt="Responsive" class="feature-icon-img">
+      </a>
+      <p class="feature-title">Wordle</p>
+      <p class="feature-description">Wordle is a popular online word puzzle game where players try to guess a five-letter word within six attempts</p>
+    </div>
+    <div class="feature-card">
+      <a href="../schedule/schedule.html" class="feature-icon">
+        <img src="../css/images/png-clipart-time-and-date-logo-illustration-computer-icons-time-management-time-attendance-clocks-schedule-calendar-text.png" alt="Passion" class="feature-icon-img">
+      </a>
+      <p class="feature-title">Schedule</p>
+      <p class="feature-description">Stay on Track, Stay Ahead!</p>
+    </div>
+    <div class="feature-card">
+      <a href="../schedule/page4.html" class="feature-icon">
+        <img src="../css/images/png-clipart-market-research-computer-icons-flat-design-marketing-text-logo-thumbnail.png" alt="Design" class="feature-icon-img">
+      </a>
+      <p class="feature-title">Research</p>
+      <p class="feature-description">Research is the key to innovation, discovery, and progress.</p>
+    </div>
+    <div class="feature-card">
+      <a href="../cv/cv.html" class="feature-icon">
+        <img src="../css/images/png-transparent-cover-letter-curriculum-vitae-resume-writing-a-cv-personal-statement-cv-word-template-blue-text.png" alt="Support" class="feature-icon-img">
+      </a>
+      <p class="feature-title">CV</p>
+      <p class="feature-description">Your Career Story, Told Right!</p>
+    </div>
+  </div>
+</div>
+
+
+<!-- Contact Section -->
+<div class="container contact-section" id="contact">
+  <p><i class="fa fa-map-marker"></i> Lebanon,Kfarhabab</p>
+  <p><i class="fa fa-phone"></i> Phone: +961 70 297 352</p>
+  <p><i class="fa fa-envelope"></i> Email: elie898@icloud.com</p>
+</div>
+
+<!-- Footer -->
+<footer class="footer">
+  <a href="#top" class="btn-back-to-top"><i class="fa fa-arrow-up"></i> To the top</a>
+</footer>
+
 </body>
 </html>

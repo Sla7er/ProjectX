@@ -1,3 +1,5 @@
+// JavaScript - Wordle Game Logic
+
 // HTML Elements
 const gameContainer = document.getElementById("game-container");
 const keyboardContainer = document.getElementById("keyboard");
@@ -50,8 +52,6 @@ function updateKeyboardState(key, state) {
         keyElement.className = `key ${keyStates[key]}`;
     }
 }
-// Create a new Audio object for the confetti sound
-const confettiSound = new Audio('sounds/confetti-sound.mp3');
 
 // Check guess and update tiles
 function checkGuess(guess) {
@@ -90,12 +90,10 @@ function checkGuess(guess) {
         // Trigger confetti
         confetti({
             particleCount: 200,
-    startVelocity: 45,
-    spread: 360,
-    origin: { x: 0.5, y: 0.5 } // Center of the screen
+            startVelocity: 45,
+            spread: 360,
+            origin: { x: 0.5, y: 0.5 } // Center of the screen
         });
-        confettiSound.play();
-
         return;
     }
 
@@ -109,6 +107,18 @@ function checkGuess(guess) {
     }
 }
 
+// Disable input for the entire row
+function disableRow() {
+    document.querySelectorAll(`.tile[data-row="${currentRow}"]`).forEach((tile) => {
+        tile.disabled = true;
+    });
+}
+
+// Focus on the first tile of the specified row
+function focusFirstTile(row) {
+    const firstTile = document.querySelector(`.tile[data-row="${row}"][data-col="0"]`);
+    firstTile.focus();
+}
 
 // Reset game
 resetButton.addEventListener("click", () => {
@@ -125,39 +135,46 @@ resetButton.addEventListener("click", () => {
     focusFirstTile(0); // Focus on the first tile of the grid
 });
 
-
-function disableRow() {
-    document.querySelectorAll(`.tile[data-row="${currentRow}"]`).forEach((tile) => {
-        tile.disabled = true;
-    });
-}
-
-function focusFirstTile(row) {
-    const firstTile = document.querySelector(`.tile[data-row="${row}"][data-col="0"]`);
-    firstTile.focus();
-}
-
 // Event listeners for typing
 document.addEventListener("input", (event) => {
     const tile = event.target;
     if (tile.classList.contains("tile")) {
         const col = parseInt(tile.getAttribute("data-col"));
         const row = parseInt(tile.getAttribute("data-row"));
-        if (col < 4) {
-            const nextTile = document.querySelector(
-                `.tile[data-row="${row}"][data-col="${col + 1}"]`
-            );
-            nextTile.focus();
+
+        // Only allow input in the current row
+        if (row === currentRow) {
+            if (col < 4) {
+                const nextTile = document.querySelector(
+                    `.tile[data-row="${row}"][data-col="${col + 1}"]`
+                );
+                nextTile.focus();
+            }
+        } else {
+            tile.value = ""; // Clear value if it's not in the current row
         }
     }
 });
 
+// Prevent non-English letters and other invalid characters
 document.addEventListener("keydown", (event) => {
     const activeTile = document.activeElement;
     if (!activeTile.classList.contains("tile")) return;
 
     const col = parseInt(activeTile.getAttribute("data-col"));
     const row = parseInt(activeTile.getAttribute("data-row"));
+
+    // Prevent space input and non-English characters
+    if (event.key === " " || event.key === "Spacebar") {
+        event.preventDefault(); // Prevent space from being entered in the input field
+        return;
+    }
+
+    // Allow only English letters (A-Z, a-z)
+    const isLetter = /^[A-Za-z]$/.test(event.key);
+    if (!isLetter) {
+        event.preventDefault(); // Prevent non-alphabetical characters
+    }
 
     // Handle backspace
     if (event.key === "Backspace" && activeTile.value === "") {
@@ -190,4 +207,4 @@ document.addEventListener("keydown", (event) => {
 // Initialize game
 createGrid();
 createKeyboard();
-focusFirstTile(0);
+focusFirstTile(0); // Focus on the first tile of the first row
